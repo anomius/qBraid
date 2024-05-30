@@ -20,7 +20,7 @@ from qbraid_core._import import LazyLoader
 plt = LazyLoader("plt", globals(), "matplotlib.pyplot")
 matplotlib = LazyLoader("matplotlib", globals(), "matplotlib")
 
-# pylint: disable=too-many-arguments,unnecessary-lambda
+# ruff: noqa: PLR0913,PLW0108
 
 
 def _counts_to_decimal(counts: dict) -> dict:

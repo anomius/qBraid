@@ -78,7 +78,7 @@ def assert_allclose_up_to_global_phase(a: np.ndarray, b: np.ndarray, atol: float
     np.testing.assert_allclose(actual=a, desired=b, atol=atol, **kwargs)
 
 
-def circuits_allclose(  # pylint: disable=too-many-arguments
+def circuits_allclose(  # ruff: noqa: PLR0913
     circuit0: "qbraid.programs.QPROGRAM",
     circuit1: "qbraid.programs.QPROGRAM",
     index_contig: bool = False,

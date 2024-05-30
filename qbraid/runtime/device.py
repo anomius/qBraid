@@ -8,7 +8,7 @@
 #
 # THERE IS NO WARRANTY for the qBraid-SDK, as per Section 15 of the GPL v3.
 
-# pylint:disable=invalid-name
+# ruff: noqa: N801,N802,N803
 
 """
 Module defining abstract QuantumDevice Class
@@ -37,7 +37,7 @@ logger = logging.getLogger(__name__)
 class QuantumDevice(ABC):
     """Abstract interface for quantum devices."""
 
-    def __init__(  # pylint: disable-next=unused-argument
+    def __init__(  # ruff: noqa: ARG001
         self,
         profile: "qbraid.runtime.TargetProfile",
         scheme: Optional[ConversionScheme] = None,

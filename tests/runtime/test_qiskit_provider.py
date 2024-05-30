@@ -35,7 +35,7 @@ from qbraid.runtime.qiskit import QiskitBackend, QiskitJob, QiskitRuntimeProvide
 
 def braket_circuit():
     """Returns low-depth, one-qubit Braket circuit to be used for testing."""
-    import braket.circuits  # pylint: disable=import-outside-toplevel
+    import braket.circuits  # ruff: noqa: PLC0415
 
     circuit = braket.circuits.Circuit()
     circuit.h(0)
@@ -46,7 +46,7 @@ def braket_circuit():
 def cirq_circuit(meas=True):
     """Returns Low-depth, one-qubit Cirq circuit to be used for testing.
     If ``meas=True``, applies measurement operation to end of circuit."""
-    import cirq  # pylint: disable=import-outside-toplevel
+    import cirq  # ruff: noqa: PLC0415
 
     q0 = cirq.GridQubit(0, 0)
 
@@ -64,7 +64,7 @@ def cirq_circuit(meas=True):
 def qiskit_circuit(meas=True):
     """Returns Low-depth, one-qubit Qiskit circuit to be used for testing.
     If ``meas=True``, applies measurement operation to end of circuit."""
-    import qiskit  # pylint: disable=import-outside-toplevel
+    import qiskit  # ruff: noqa: PLC0415
 
     circuit = qiskit.QuantumCircuit(1, 1) if meas else qiskit.QuantumCircuit(1)
     circuit.h(0)

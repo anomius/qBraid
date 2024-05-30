@@ -51,7 +51,7 @@ def random_circuit(
     num_qubits = np.random.randint(1, 4) if num_qubits is None else num_qubits
     depth = np.random.randint(1, 4) if depth is None else depth
 
-    # pylint: disable=import-outside-toplevel
+    # ruff: noqa: PLC0415
     if package == "qasm3":
         from qbraid.interface.random.qasm3_random import _qasm3_random
 

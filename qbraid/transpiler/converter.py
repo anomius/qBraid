@@ -157,7 +157,7 @@ def transpile(
                         alias = None
 
                     if alias == "cirq":
-                        # pylint: disable=import-outside-toplevel
+                        # ruff: noqa: PLC0415
                         from qbraid.transforms.cirq import decompose
 
                         temp_program = decompose(temp_program)

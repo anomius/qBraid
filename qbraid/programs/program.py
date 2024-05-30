@@ -136,7 +136,7 @@ class QbraidProgram(QuantumProgram, ABC):
 
         for i in range(2**num_qubits):
             for j in range(2**num_qubits):
-                # pylint: disable=consider-using-generator
+                # ruff: noqa: UP027
                 # Convert indices to binary representations (qubit states)
                 bits_i = [((i >> bit) & 1) for bit in range(num_qubits)]
                 bits_j = [((j >> bit) & 1) for bit in range(num_qubits)]

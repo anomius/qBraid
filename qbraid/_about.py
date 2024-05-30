@@ -17,7 +17,8 @@ def about() -> None:
     """Displays information about qBraid, core/optional packages, and Python
     version/platform information.
     """
-    # pylint: disable=import-outside-toplevel
+    # ruff: noqa: PLC0415
+    
     import platform
 
     from networkx import __version__ as networkx_version

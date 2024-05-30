@@ -103,5 +103,4 @@ tox
 
 ## Code Style
 
-For code style, our project uses a combination of [isort](https://github.com/PyCQA/isort), [pylint](https://github.com/pylint-dev/pylint),
-and [black](https://github.com/psf/black). Each of these tools is setup with its own default configuration specific to this project in `pyproject.toml`.
+For code style, our project uses a combination of [isort](https://github.com/PyCQA/isort),[Ruff](https://github.com/astral-sh/ruff). Each of these tools is setup with its own default configuration specific to this project in `pyproject.toml`.

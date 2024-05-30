@@ -41,13 +41,13 @@ def _dynamic_importer(opt_modules: list[str]) -> dict[str, Type[Any]]:
             program_type = _get_class(module.__name__)
             program_type_alias = module.__name__.split(".")[0]
             imported[program_type_alias] = program_type
-        except Exception:  # pylint: disable=broad-except
+        except Exception:  # ruff: noqa: PT011
             pass
 
     return imported
 
 
-# pylint: disable=undefined-variable,inconsistent-return-statements
+# ruff: noqa: F823,PLR0911
 def _get_class(module: str):
     if module == "cirq":
         return cirq.Circuit  # type: ignore

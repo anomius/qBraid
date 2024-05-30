@@ -62,7 +62,7 @@ class OpenQasm2Program(QbraidProgram):
         return max(counts_dict.values()) if counts_dict else 0
 
     @property
-    def depth(self) -> int:  # pylint: disable=too-many-statements
+    def depth(self) -> int:  # ruff: noqa: PLR0915
         """Calculates circuit depth of OpenQASM 2 string"""
         qasm_str = self.program
         lines = qasm_str.splitlines()
@@ -99,7 +99,7 @@ class OpenQasm2Program(QbraidProgram):
                         qubit_name = qubit.split("[")[0]
                         if op == qubit_name:
                             matches.append(qubit)
-                # pylint: disable=broad-exception-caught
+                # ruff: noqa: PT011
                 except Exception:
                     continue
 
@@ -144,7 +144,7 @@ class OpenQasm2Program(QbraidProgram):
 
     def _unitary(self) -> "np.ndarray":
         """Return the unitary of the QASM"""
-        # pylint: disable=import-outside-toplevel
+        # ruff: noqa: PLC0415 
         from qbraid.transpiler.conversions.qasm2 import qasm2_to_cirq
 
         return qasm2_to_cirq(self.program).unitary()

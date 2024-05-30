@@ -44,7 +44,7 @@ def circuit_drawer(
         program = transpile(program, as_package)
         package = as_package
 
-    # pylint: disable=import-outside-toplevel
+    # ruff: noqa: PLC0415
 
     if package == "qiskit":
         from qiskit.visualization import circuit_drawer as qiskit_drawer

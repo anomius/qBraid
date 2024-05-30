@@ -31,7 +31,7 @@ def running_in_jupyter() -> bool:
             ip = get_ipython()
             if ip is not None:
                 return getattr(ip, "kernel", None) is not None
-    except Exception as err:  # pylint: disable=broad-exception-caught
+    except Exception as err: # ruff: noqa: PT011
         logger.error("Error checking if running in Jupyter: %s", err)
 
     return False
